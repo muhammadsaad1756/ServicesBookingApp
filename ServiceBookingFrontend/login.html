@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hide the register form by default */
+        #registerSection {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Service Booking System</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Login Form -->
+                <h2 class="text-center">Login</h2>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+
+                <!-- Link to show Register Form -->
+                <p class="text-center mt-3">
+                    Not registered? <a href="#" id="showRegisterForm">Create an account</a>
+                </p>
+            </div>
+
+            <!-- Register Form -->
+            <div class="col-md-6" id="registerSection">
+                <h2 class="text-center">Register</h2>
+                <form id="registerForm">
+                    <div class="mb-3">
+                        <label for="registerName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="registerName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="registerEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Register</button>
+                </form>
+
+                
+                <p class="text-center mt-3">
+                    Already registered? <a href="#" id="showLoginForm">Login here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="mb-0">&copy; 2023 Service Booking System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        document.getElementById("showRegisterForm").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("registerForm").style.display = "block"; 
+        });
+
+        document.getElementById("showLoginForm").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.getElementById("registerForm").style.display = "none"; 
+            document.getElementById("loginForm").style.display = "block"; 
+        });
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

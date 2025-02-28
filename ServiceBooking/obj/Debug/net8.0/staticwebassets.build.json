@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "OjviTvHRO/+yA59zatlmJtdhVh/AUm72VDxTW+hVZzE=",
+  "Source": "ServiceBooking",
+  "BasePath": "_content/ServiceBooking",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
